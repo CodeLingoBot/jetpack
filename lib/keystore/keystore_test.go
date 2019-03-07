@@ -198,7 +198,7 @@ func TestGetAllKeyrings(t *testing.T) {
 
 type acNames []types.ACIdentifier
 
-// sort.Interface
+// Len: sort.Interface
 func (acn acNames) Len() int           { return len(acn) }
 func (acn acNames) Less(i, j int) bool { return acn[i].String() < acn[j].String() }
 func (acn acNames) Swap(i, j int)      { acn[i], acn[j] = acn[j], acn[i] }

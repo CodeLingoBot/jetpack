@@ -283,7 +283,7 @@ func (img *Image) sealImage() error {
 	return nil
 }
 
-// Return list of images that depend on this image
+// DependantImages returns list of images that depend on this image
 func (img *Image) DependantImages() ([]*Image, error) {
 	if img.Hash == nil {
 		// Can it happen?
@@ -306,7 +306,7 @@ imgs:
 	return dependantImgs, nil
 }
 
-// Return list of pods that run this image
+// Pods returns list of pods that run this image
 func (img *Image) Pods() ([]*Pod, error) {
 	if img.Hash == nil {
 		return nil, nil

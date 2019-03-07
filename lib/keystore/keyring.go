@@ -54,7 +54,7 @@ func (kr *Keyring) Entities() EntityList {
 	return rv
 }
 
-// sort.Interface - sort by prefix, then by path
+// Len: sort.Interface - sort by prefix, then by path
 func (kr *Keyring) Len() int { return len(kr.EntityList) }
 
 func (kr *Keyring) Less(i, j int) bool {

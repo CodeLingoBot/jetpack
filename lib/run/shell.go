@@ -11,7 +11,7 @@ func init() {
 	}
 }
 
-// Returns true if str is shell-safe
+// IsShellSafe returns true if str is shell-safe
 func IsShellSafe(str string) bool {
 	return strings.IndexFunc(str, func(r rune) bool { return !shellSafe[r] }) < 0
 }

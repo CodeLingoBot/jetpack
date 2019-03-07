@@ -31,7 +31,7 @@ func (e *Entity) String() string {
 
 type EntityList []Entity
 
-// sort.Interface
+// Len: sort.Interface
 func (ee EntityList) Len() int { return len(ee) }
 func (ee EntityList) Less(i, j int) bool {
 	if ee[i].Prefix == ee[j].Prefix {

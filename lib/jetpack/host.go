@@ -250,7 +250,7 @@ func (h *Host) ReifyPodManifest(pm *schema.PodManifest) (*schema.PodManifest, er
 	return pm, nil
 }
 
-// Create new pod from a fully reified manifest.
+// CreatePod: Create new pod from a fully reified manifest.
 func (h *Host) CreatePod(pm *schema.PodManifest) (*Pod, error) {
 	return CreatePod(h, pm)
 }

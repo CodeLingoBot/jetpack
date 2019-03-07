@@ -29,7 +29,7 @@ func (mdsi *MDSInfo) String() string {
 var mdsUid = -1
 var mdsGid = -1
 
-// Returns UID and GID that metadata server is configured to run as.
+// MDSUidGid returns UID and GID that metadata server is configured to run as.
 func MDSUidGid() (int, int) {
 	if mdsUid < 0 {
 		u, err := user.Lookup(Config().MustGetString("mds.user"))

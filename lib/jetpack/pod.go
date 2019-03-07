@@ -552,7 +552,7 @@ func (pod *Pod) Apps() []*App {
 	return apps
 }
 
-// Runs all the apps in parallel, with closed stdin & piped/logged
+// Run: Runs all the apps in parallel, with closed stdin & piped/logged
 // stdout and stderr
 func (pod *Pod) Run() error {
 	// This is repeated in App.Run(); should we sync.Once it?
